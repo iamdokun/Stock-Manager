@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(90deg, rgba(69,84,108, 1), rgba(255,251,203, 1) 100%);
+}
+
 /* Header */
 .head-wrap {
     position: fixed;
