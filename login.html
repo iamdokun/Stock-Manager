@@ -65,25 +65,24 @@
     </div>
 
     <script language="javascript">
-        function check(form)/*function to check userid & password*/
-        {
-         /*the following code checkes whether the entered userid and password are matching*/
-         if(form.userid.value == "stockManager" && form.pswrd.value == "stockManager") {
+        function check(form)/*function to check userid & password*/ {
+            /*the following code checkes whether the entered userid and password are matching*/
+            if (form.userid.value == "stockManager" && form.pswrd.value == "stockManager") {
 
-            window.open('index.html')/*opens the target page while Id & password matches*/
+                window.open('stockManager.html')/*opens the target page while Id & password matches*/
 
-          } else if (form.userid.value == "cashier" && form.pswrd.value == "cashier") {
+            } else if (form.userid.value == "cashier" && form.pswrd.value == "cashier") {
 
-            window.open('index.html')
+                window.open('cashier.html')
 
-          } else {
+            } else {
 
-           alert("Error Password or Username")/*displays error message*/
+                alert("Error Password or Username")/*displays error message*/
 
-          }
-        
+            }
+
         }
-        </script>
+    </script>
 </body>
 
 </html>
