@@ -18,8 +18,68 @@
 </head>
 <body>
    
-    <h1>Stock Manager</h1>
-    <h1>Work in Progress</h1>
+    <div class="container">
+        <div class="head-text mt-5">
+            <h2 class="text-center">Stock Manager</h2>
+            <p class="text-center">Input all product Purchased</p>
+
+            <form>
+                
+                  <div class="form-group">
+                    <label>Product Name</label>
+                
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                        <option selected>Choose...</option>
+                        <option value="1">Coconut Bread</option>
+                        <option value="2">Sardine Bread</option>
+                        <option value="4">Sweet Milk Bread</option>
+                        <option value="3">Agege Bread</option>
+                        <option value="3">Ghana Sugar Bread</option>
+                        <option value="3">Vanilla Bread</option>
+                        <option value="3">Chocolate Bread</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Category</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                        <option selected>Bread</option>
+                        
+                        
+                    </select>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Product Price</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label >Product Avalaible</label>
+                      <input type="text" class="form-control" >
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Discount</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label >Product ID</label>
+                      <input type="text" class="form-control" >
+                    </div>
+                  </div>
+
+                  <label> Product Image </label>
+                  <div class="input-group">
+                    <div class="custom-file">  
+                        <input type="file" class="custom-file-input form-control" id="inputGroupFile02"/>
+                      <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+             
+              </form>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -32,5 +92,13 @@
         crossorigin="anonymous"></script>
     <script src="/JS/main.js"></script>
 
+    <script>
+        $('#inputGroupFile02').on('change',function(){
+            //get the file name
+            var fileName = $(this).val();
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        })
+    </script>
 </body>
 </html>
