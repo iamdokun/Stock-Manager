@@ -8,10 +8,11 @@ const productId = document.querySelector('#product-id');
 
 stockProduct.addEventListener('click', stockFunction);
 
- function stockFunction (pdts) {
-    pdts.preventDefault();
+let productStocked;
 
-    let productStocked = {
+ function stockFunction (pdts) {
+
+     productStocked = {
         Id: productId.value,
         name: productName.value,
         category: productCategory.value,
@@ -20,23 +21,21 @@ stockProduct.addEventListener('click', stockFunction);
         discount: productDiscount.value
     }
 
-    // return productStocked;
-    console.log(productStocked);
-
+    addToStore()
     
-    function (pdt) {
-        
-        if (localStorage.getItem('productStocked') === null) {
-            productStocked = [];
-        } else {
-            productStocked = JSON.parse(localStorage.getItem('productStocked'));
-        }
-        productStocked.push(pdt);
-    }
+}
 
-    localStorage.setItem('productStocked', JSON.stringify(productStocked))
+let productObj;
 
-
+function addToStore() {
+    isProductAvailable = localStorage.getItem('addToStore');
+    if (isProductAvailable !== null){
+        productObj = JSON.parse(isProductAvailable)
+         productObj.push(productStocked)
+         localStorage.setItem('addToStore', JSON.stringify(productObj))
+     } else {
+         localStorage.setItem('addToStore', JSON.stringify([productStocked]));
+     }
     
 }
 
