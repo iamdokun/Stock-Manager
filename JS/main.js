@@ -6,6 +6,8 @@ const productInstock = document.querySelector('#product-instock');
 const productDiscount = document.querySelector('#product-discount');
 const productId = document.querySelector('#product-id');
 
+
+
 stockProduct.addEventListener('click', stockFunction);
 
 let productStocked;
@@ -38,4 +40,7 @@ function addToStore() {
      }
     
 }
+
+
+
 
